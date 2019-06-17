@@ -4,13 +4,14 @@ const botonCifrar= document.getElementById("botonCifrar");
 const botonInicio= document.getElementById("botonInicio");
 const botonInicio2= document.getElementById("botonInicio2");
 const primerSeccion = document.getElementById('primerSeccion');
-const textoCifrar = document.getElementById ('textoCifrar');
-const textoCifrado= document.getElementById ("textoCifrado");
+const string = document.getElementById ('textoCifrar');
+const nuevaCadena= document.getElementById ("textoCifrado");
 const seccionCifrar= document.getElementById ("seccionCifrar");
-const textoDescifrar = document.getElementById ('textoDescifrar');
-const textoDescifrado= document.getElementById ("textoDescifrado");
+const string2 = document.getElementById ('textoDescifrar');
+const nuevaCadena2= document.getElementById ("textoDescifrado");
 const seccionDescifrar= document.getElementById ("seccionDescifrar");
 const offset= document.getElementById("offset");
+const offset2= document.getElementById("offset2");
 
 const mostrarSeccionCifrar = ()=> {
   primerSeccion.classList.add ("desaparecer");
@@ -19,14 +20,14 @@ const mostrarSeccionCifrar = ()=> {
   seccionCifrar.classList.remove ("desaparecer");
 }
 const mostrarTextoCifrado = ()=> {
-  textoCifrado.classList.remove ("desaparecer");
+  nuevaCadena.classList.remove ("desaparecer");
 }
 const botonIniciar = () => {
   seccionCifrar.classList.add ("desaparecer");
   primerSeccion.classList.remove ("desaparecer");
   botonEscribir.classList.remove ("desaparecer");
   botonRevelar.classList.remove ("desaparecer");
-  textoCifrado.classList.add ("desaparecer");
+  nuevaCadena.classList.add ("desaparecer");
 }
 const mostrarSeccionDescifrar = ()=> {
   primerSeccion.classList.add ("desaparecer");
@@ -35,14 +36,14 @@ const mostrarSeccionDescifrar = ()=> {
   seccionDescifrar.classList.remove ("desaparecer");
 }
 const mostrarTextoDescifrado = ()=> {
-  textoDescifrado.classList.remove ("desaparecer");
+  nuevaCadena2.classList.remove ("desaparecer");
 }
 const botonIniciar2 = () => {
   seccionDescifrar.classList.add ("desaparecer");
   primerSeccion.classList.remove ("desaparecer");
   botonEscribir.classList.remove ("desaparecer");
   botonRevelar.classList.remove ("desaparecer");
-  textoDescifrado.classList.add ("desaparecer");
+  nuevaCadena2.classList.add ("desaparecer");
 }
 
 
