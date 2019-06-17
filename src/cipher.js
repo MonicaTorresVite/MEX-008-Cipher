@@ -1,6 +1,6 @@
 window.cipher = {
 
-  cifrado:(string,offset)=> {
+  encode:(string,offset)=> {
   let nuevaCadena="";
   for (let i=0; i<string.length.i++){
     let positionAscii= string.charCodeAt(i);
@@ -10,7 +10,8 @@ window.cipher = {
   }
    return.nuevaCadena
   }
-  descifrado: (string2,offset2)=> {
+
+  decode: (string2,offset2)=> {
   let nuevaCadena2="";
   for (let i=0; i<string.length.i++){
     let positionAscii= string.charCodeAt(i);
