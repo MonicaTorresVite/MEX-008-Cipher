@@ -1,6 +1,7 @@
 const botonEscribir = document.getElementById ('botonEscribir');
 const botonRevelar = document.getElementById('botonRevelar');
 const botonCifrar= document.getElementById("botonCifrar");
+const botonDescifrar= document.getElementById("botonDescifrar")
 const botonInicio= document.getElementById("botonInicio");
 const botonInicio2= document.getElementById("botonInicio2");
 const primerSeccion = document.getElementById('primerSeccion');
@@ -21,7 +22,7 @@ const mostrarSeccionCifrar = ()=> {
 }
 const mostrarTextoCifrado = ()=> {
   nuevaCadena.classList.remove ("desaparecer");
-  let textoCifrado = window.cipher.encode(string.value,offset);
+  let textoCifrado = window.cipher.encode(offset,string.value);
   nuevaCadena.innerHtml= textoCifrado;
 
 }
@@ -40,7 +41,7 @@ const mostrarSeccionDescifrar = ()=> {
 }
 const mostrarTextoDescifrado = ()=> {
   nuevaCadena2.classList.remove ("desaparecer");
-  let textoDescifrado = window.cipher.decode(string2.value,offset2);
+  let textoDescifrado = window.cipher.decode(offset2,string2.value);
   nuevaCadena.innerHtml= textoDescifrado;
 }
 const botonIniciar2 = () => {

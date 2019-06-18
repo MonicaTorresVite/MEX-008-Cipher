@@ -1,24 +1,36 @@
 window.cipher = {
 
-  encode:(string,offset)=> {
+  encode:(offset,string)=> {
   let textoCifrado="";
-  for (let i=0; i<string.length.i++){
+  offset= parseInt(offset);
+  for (let i = 0; i < string.length; i++) {
+     let positionAscii = string.charCodeAt(i);
+     if (positionAscii === 32) {
+           textoCifrado = textoCifrado + ' ';
+     }
+  else (let i=0; i<string.length;i++){
     let positionAscii= string.charCodeAt(i);
-    let newPositionAscii=((positionAscii-32+offset)%95+32);
-    let newCharacter=string.fromCharCode(newPositionAscii);
+    let newPositionAscii=((positionAscii-65+offset)%26+65);
+    let newCharacter=String.fromCharCode(newPositionAscii);
     textoCifrado= textoCifrado.concat(newCharacter);
   }
-   return.textoCifrado
- }
+   return textoCifrado
+ },
 
-  decode: (string2,offset2)=> {
+  decode: (offset,string)=> {
   let textoDescifrado="";
-  for (let i=0; i<string.length.i++){
+  offset= parseInt(offset);
+  for (let i = 0; i < string.length; i++) {
+     let positionAscii = string.charCodeAt(i);
+     if (positionAscii === 32) {
+           textoDescifrado = textoDescifrado + ' ';
+     }
+  else (let i=0; i<string.length;i++){
     let positionAscii= string.charCodeAt(i);
-    let newPositionAscii=((positionAscii-32-offset2)%95+32);
-    let newCharacter=string.fromCharCode(newPositionAscii);
+    let newPositionAscii=((positionAscii+65-offset)%26+65);
+    let newCharacter=String.fromCharCode(newPositionAscii);
     textoDescifrado= textoDescifrado.concat(newCharacter);
   }
-   return.textoDescifrado
+   return textoDescifrado
   }
 };
