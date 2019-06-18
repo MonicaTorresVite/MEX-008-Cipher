@@ -23,7 +23,7 @@ const mostrarSeccionCifrar = ()=> {
 const mostrarTextoCifrado = ()=> {
   nuevaCadena.classList.remove ("desaparecer");
   let textoCifrado = window.cipher.encode(offset,string.value);
-  nuevaCadena.innerHtml= textoCifrado;
+  nuevaCadena.value.innerHtml= textoCifrado;
 
 }
 const botonIniciar = () => {
@@ -42,7 +42,7 @@ const mostrarSeccionDescifrar = ()=> {
 const mostrarTextoDescifrado = ()=> {
   nuevaCadena2.classList.remove ("desaparecer");
   let textoDescifrado = window.cipher.decode(offset2,string2.value);
-  nuevaCadena.innerHtml= textoDescifrado;
+  nuevaCadena.value.innerHtml= textoDescifrado;
 }
 const botonIniciar2 = () => {
   seccionDescifrar.classList.add ("desaparecer");
