@@ -8,13 +8,15 @@ window.cipher = {
      if (positionAscii === 32) {
            textoCifrado = textoCifrado + ' ';
      }
-  else (let i=0; i<string.length;i++){
+  else{
     let positionAscii= string.charCodeAt(i);
-    let newPositionAscii=((positionAscii-65+offset)%26+65);
+    let newPositionAscii=(positionAscii-65+offset)%26+65;
     let newCharacter=String.fromCharCode(newPositionAscii);
     textoCifrado= textoCifrado.concat(newCharacter);
   }
-   return textoCifrado
+ }
+ return textoCifrado
+
  },
 
   decode: (offset,string)=> {
@@ -25,12 +27,13 @@ window.cipher = {
      if (positionAscii === 32) {
            textoDescifrado = textoDescifrado + ' ';
      }
-  else (let i=0; i<string.length;i++){
+  else{
     let positionAscii= string.charCodeAt(i);
     let newPositionAscii=((positionAscii+65-offset)%26+65);
     let newCharacter=String.fromCharCode(newPositionAscii);
     textoDescifrado= textoDescifrado.concat(newCharacter);
   }
-   return textoDescifrado
   }
-};
+  return textoDescifrado
+}
+}
